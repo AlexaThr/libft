@@ -1,44 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: athorne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/16 14:15:21 by athorne           #+#    #+#             */
-/*   Updated: 2019/06/18 17:08:20 by athorne          ###   ########.fr       */
+/*   Created: 2019/06/18 17:09:13 by athorne           #+#    #+#             */
+/*   Updated: 2019/06/18 17:23:16 by athorne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-int		ft_strlen(char *str)
+char *ft_strcat (char *dest, const char *src)
 {
-	int x;
-
-	x = 0;
-	while (str[x] != '\0')
-	{
-		x++;
-	}
-	return (x);
-}
-
-char	*ft_strdup(char *src)
-{
-	char	*dest;
-	int		i;
-
-	dest = NULL;
-	dest = malloc(ft_strlen(src) * sizeof(char));
+	int i;
+	int j;
 	i = 0;
-	while (src[i])
-	{
-		dest[i] = src[i];
+	j = 0;
+
+	while (dest[i])
 		i++;
+	while (src[j])
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
 	dest[i] = '\0';
-	if (dest == NULL)
-		return (0);
 	return (dest);
 }
+

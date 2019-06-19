@@ -1,44 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: athorne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/16 14:15:21 by athorne           #+#    #+#             */
-/*   Updated: 2019/06/18 17:08:20 by athorne          ###   ########.fr       */
+/*   Created: 2019/06/18 14:21:38 by athorne           #+#    #+#             */
+/*   Updated: 2019/06/18 16:38:54 by athorne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-int		ft_strlen(char *str)
-{
-	int x;
-
-	x = 0;
-	while (str[x] != '\0')
+void *memcpy (void *dst, const void *src, size_t n)
 	{
-		x++;
-	}
-	return (x);
-}
+		int i;
+		const char *srcb;
+		char *dstb;
 
-char	*ft_strdup(char *src)
-{
-	char	*dest;
-	int		i;
+		i = 0;
+		srcb = src;
+		dstb = dst;
 
-	dest = NULL;
-	dest = malloc(ft_strlen(src) * sizeof(char));
-	i = 0;
-	while (src[i])
-	{
-		dest[i] = src[i];
-		i++;
+		while (i < n)
+		{
+			dstb[i] = srcb[i];
+			i++;
+		}
+		return (dst);
 	}
-	dest[i] = '\0';
-	if (dest == NULL)
-		return (0);
-	return (dest);
-}
