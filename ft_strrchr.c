@@ -1,3 +1,4 @@
+
 int		ft_strlen(char *str)
 {
 	int x;
@@ -12,13 +13,13 @@ int		ft_strlen(char *str)
 
 
 
-char *ft_strchr(char *str, int ch)
+char *ft_strrchr(char *str, int ch)
 {
 	int i;
-	i = 0;
-	while (str[i] != ch && i <= ft_strlen(str))
+	i = ft_strlen(str);
+	while (str[i] != ch && i >= 0)
 	{
-		i++;
+		i--;
 	}	
 	
 	if (str[i] == (char)ch)
