@@ -12,7 +12,7 @@
 
 #include <string.h>
 
-void *memcpy (void *dst, const void *src, size_t n)
+void *ft_memcpy (void *dst, const void *src, size_t n)
 	{
 		int i;
 		const char *srcb;
