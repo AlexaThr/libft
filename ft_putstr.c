@@ -1,8 +1,9 @@
-void    ft_putstr(char str)
+#include <unistd.h>
+
+void    ft_putstr(char const *s)
 {
-    i = 0;
-    while (str[i])
+    while (*s)
     {
-        write (1, &str, i++);
+        write (1, s++, 1);
     }
 }
