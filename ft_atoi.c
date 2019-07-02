@@ -19,19 +19,16 @@ int		ft_atoi(char *str)
 	sign = 1;
 	i = 0;
 	r = 0;
-	while (str[i] && ((str[i] >= '0' && str[i] <= '9') || (str[i] == '+'
-					|| str[i] == '-' || str[i] == ' ' || str[i] == '\t'
-					|| str[i] == '\n' || str[i] == '\r' || str[i] == '\v'
-					|| str[i] == '\f')))
+	while (str[i] == '+' || str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
+			 str[i] == '\r' || str[i] == '\v' || str[i] == '\f')))
+		i++;
+	if (str[i] == '-')
 	{
-		while (str[i] == '-' || str[i] == '+' || str[i] == ' ' || str[i] == '\t'
-				|| str[i] == '\n' || str[i] == '\r' || str[i] == '\v'
-				|| str[i] == '\f')
-		{
-			if (str[i] == '-')
-				sign = -1;
-			i++;
-		}
+		sign = -1;
+		i++;
+	}
+	while (str[i] >= '0' && <= '9')
+	{
 		r = r * 10 + str[i] - '0';
 		i++;
 	}
