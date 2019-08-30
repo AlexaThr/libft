@@ -4,6 +4,8 @@ NAME = libft.a
 
 FILE = *.c
 
+HEADERS = libft.h
+
 all: $(NAME)
 
 $(NAME): 
