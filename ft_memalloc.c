@@ -4,11 +4,11 @@
 
 void    *ft_memalloc (size_t size)
 {
-    char *s;
-    s = malloc(size);
-    if (s == NULL)
+    void *ptr;
+    ptr = malloc(size);
+    if (ptr == NULL)
         return (NULL);
     else
-        ft_bzero(s, size);
-    return (s);
+        ft_bzero(ptr, size);
+    return (ptr);
 }
