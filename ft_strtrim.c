@@ -1,7 +1,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-char *ft_strtrim(char const *s)
+char	*ft_strtrim(char const *s)
 {
     int		i;
 	int		len;

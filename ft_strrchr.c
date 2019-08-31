@@ -1,19 +1,6 @@
+#include "libft.h"
 
-int		ft_strlen(char *str)
-{
-	int x;
-
-	x = 0;
-	while (str[x] != '\0')
-	{
-		x++;
-	}
-	return (x);
-}
-
-
-
-char *ft_strrchr(char *str, int ch)
+char	*ft_strrchr(char *str, int ch)
 {
 	int i;
 	i = ft_strlen(str);

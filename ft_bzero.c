@@ -11,17 +11,7 @@
 /* ************************************************************************** */
 
 #include <string.h>
-
-void	*ft_memset(void *b, int c, size_t len)
-{
-	unsigned char *dest;
-	if (len == 0)
-		return (b);
-	dest = b;
-	while (len--)
-		*dest++ = (unsigned char)c;
-	return (b);
-}
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

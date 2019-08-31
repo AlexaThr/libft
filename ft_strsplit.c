@@ -31,7 +31,7 @@ int wordcount (char const *str, char c)
     return (count);
 }
 
-char ** ft_strsplit (char const *s, char c)
+char    **ft_strsplit (char const *s, char c)
 {
     char    **a;
     size_t    inside_a_word;
