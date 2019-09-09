@@ -2,9 +2,9 @@
 
 int ft_memcmp (const void *s1, const void *s2, size_t n)
 {
-    int i;
+    unsigned int i;
     int res;
-    int i = 0;
+    i = 0;
 
     if (n == 0)
         return (0);
