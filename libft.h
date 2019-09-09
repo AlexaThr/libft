@@ -10,6 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+typedef struct  s_list
+    {
+    void   *content;
+    size_t  content_size;
+    struct s_list   *next;
+    }           t_list;
+
 char	*ft_toupper(char *str);
 char	*ft_tolower(char *str);
 char	*ft_strstr(char *str, char *to_find);
