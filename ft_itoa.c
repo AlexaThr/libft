@@ -1,4 +1,5 @@
 #include "libft.h"
+#include <stdlib.h>
 
 static size_t		ft_itoalen(int n)
 {
