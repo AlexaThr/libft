@@ -12,15 +12,15 @@ all: $(NAME)
 
 $(NAME):
 	$(INC)
-	gcc	$(FLAGS) -c $(FILE)
-	ar	rc	$(NAME)	$(OBJ)
+	gcc $(FLAGS) -c $(FILE)
+	ar rc $(NAME) $(OBJ)
 
 clean:
-	rm	-rf	$(OBJ)
+	rm -rf $(OBJ)
 
 fclean:
 	clean
-	rm	-rf $(NAME)
+	rm -rf $(NAME)
 
 re:
-	fclean	all
+	fclean all
