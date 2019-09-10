@@ -6,8 +6,9 @@ FILE = *.c
 
 all: $(NAME)
 
-$(NAME): 
-	gcc -c $(FILE) $(FLAGS) && ar rc $(NAME) *.o
+$(NAME):
+	gcc -c $(FLAGS) $(FILE)
+	ar rc $(NAME) *.o
 
 clean:
 	rm -rf $(NAME)
