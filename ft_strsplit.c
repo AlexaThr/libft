@@ -41,7 +41,7 @@ char    **ft_strsplit (char const *s, char c)
 
     if (!s)
         return (NULL);
-    if (!(a = (char **)ft_memalloc((ft_countwords(s, c) + 1) * sizeof(char *))))
+    if (!(a = (char **)ft_memalloc((wordcount(s, c) + 1) * sizeof(char *))))
         return (NULL);
     word_index = 0;
     inside_a_word = 0;
