@@ -8,12 +8,12 @@ FILE=*.c
 
 OBJ=$(FILE:.c=.o)
 
-all: $(NAME)
-
 $(NAME):
 	$(INC)
 	gcc $(FLAGS) -c $(FILE)
 	ar rc $(NAME) $(OBJ)
+
+all: $(NAME)
 
 clean:
 	rm -rf $(OBJ)
