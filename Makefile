@@ -1,23 +1,26 @@
-FLAGS =	-Wall	-Wextra	-Werror
+FLAGS=-Wall	-Wextra	-Werror
 
-NAME =	libft.a
+NAME=libft.a
 
-INC =	libft.h
+INC=libft.h
 
-FILE =	*.c
+FILE=*.c
 
-all:	$(NAME)
+OBJ=$(FILE:.c=.o)
+
+all: $(NAME)
 
 $(NAME):
-	gcc	-c	$(FLAGS)	$(FILE)
-	ar	rc	$(NAME)	*.o
+	$(INC)
+	gcc	$(FLAGS) -c $(FILE)
+	ar	rc	$(NAME)	$(OBJ)
 
 clean:
-	rm	-rf	$(NAME)
+	rm	-rf	$(OBJ)
 
 fclean:
 	clean
-	rm	*.o
+	rm	-rf $(NAME)
 
 re:
 	fclean	all
