@@ -2,25 +2,22 @@ FLAGS=-Wall	-Wextra	-Werror
 
 NAME=libft.a
 
-INC=libft.h
+SRC=*.c
 
-FILE=*.c
-
-OBJ=$(FILE:.c=.o)
-
-$(NAME):
-	$(INC)
-	gcc $(FLAGS) -c $(FILE)
-	ar rc $(NAME) $(OBJ)
+OBJ=$(SRC:.c=.o)
 
 all: $(NAME)
 
+$(NAME): $(OBJ)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
+
 clean:
-	rm -rf $(OBJ)
+	rm -f $(OBJ)
 
 fclean:
 	clean
-	rm -rf $(NAME)
+	rm -f $(NAME)
 
 re:
 	fclean all
