@@ -8,7 +8,8 @@ OBJ=$(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME):
+	gcc -c $(SRC) $(FLAGS)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
