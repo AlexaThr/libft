@@ -6,7 +6,8 @@ SRC=*.c
 
 OBJ=$(SRC:.c=.o)
 
-all: $(NAME)
+all:
+	$(NAME)
 
 $(NAME):
 	gcc -c $(SRC) $(FLAGS)
