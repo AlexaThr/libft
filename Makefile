@@ -18,6 +18,8 @@ $(NAME):
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
+all: $(NAME)
+
 clean:
 	rm -f $(OBJ)
 
