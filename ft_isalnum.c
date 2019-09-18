@@ -1,4 +1,5 @@
 #include "libft.h"
+#include <string.h>
 
 int ft_isalnum (int c)
 {
