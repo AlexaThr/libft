@@ -10,28 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *str, char *to_find)
+char	*ft_strstr(const char *str, const char *to_find)
 {
 	int i;
 	int j;
 
+	if (!*to_find)
+		return ((char*)str);
 	i = 0;
-	if (to_find[i] == '\0')
-		return (str);
 	while (str[i])
 	{
 		if (str[i] == to_find[0])
 		{
-			j = 0;
-			while (to_find[j] && str[i] == to_find[j])
+			j = 1;
+			while (to_find[j] && str[i + j] == to_find[j])
 			{
-				i++;
-				j++;
+				++j;
 			}
 			if (to_find[j] == '\0')
-				return (&str[i - j]);
+				return ((char*)&str[i]);
 		}
-		i++;
+		++i;
 	}
 	return (0);
 }

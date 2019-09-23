@@ -19,15 +19,15 @@ typedef struct  s_list
     struct s_list   *next;
     }           t_list;
 
-char	*ft_toupper(char *str);
-char	*ft_tolower(char *str);
-char	*ft_strstr(char *str, char *to_find);
+int 	ft_toupper(int c);
+int 	ft_tolower(int c);
+char	*ft_strstr(const char *str, const char *to_find);
 char	*ft_strncpy(char *dest, char *src, unsigned int n);
-int		ft_strncmp(char *s1, char *s2, unsigned int n);
-int		ft_strlen(char *str);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strlen(const char *str);
 char	*ft_strdup(char *src);
-char	*ft_strcpy(char *dest, char *src);
-int		ft_strcmp(char *s1, char *s2);
+char	*ft_strcpy(char *dest, const char *src);
+int		ft_strcmp(const char *s1, const char *s2);
 int		ft_atoi(char *str);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
